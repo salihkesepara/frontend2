@@ -39,9 +39,6 @@ angular.module('module.app', ['remote.config', 'remote.http', 'request.register'
   // REGISTER
   register.run("4234234234@email.com" + Math.random()).then(function(result) {
     console.log(result);
-  }, function(err) {
-    console.log(err.data.errors[0]);
-  }).finally(function() {
 
     // REVIEWS
     reviews.run().then(function(result) {
@@ -51,6 +48,8 @@ angular.module('module.app', ['remote.config', 'remote.http', 'request.register'
       console.log(err);
     });
 
+  }, function(err) {
+    console.log(err.data.errors[0]);
   });
 
 }])
