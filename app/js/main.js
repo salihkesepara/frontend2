@@ -37,7 +37,7 @@ angular.module('module.app', ['remote.config', 'remote.http', 'request.register'
   }
 
   // REGISTER
-  register.run("emai312312311l@email.com").then(function(result) {
+  register.run("4234234234@email.com" + Math.random()).then(function(result) {
     console.log(result);
   }, function(err) {
     console.log(err.data.errors[0]);
