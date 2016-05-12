@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Frontend2</title>
+		<!--build:css css/styles.min.css-->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<link rel="stylesheet" type="text/css" href="css/typekit.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/rating.css">
+		<!--endbuild-->
+	</head>
+	<body ng-app="module.app" ng-controller="AppCtrl">
+		<div class="nav">
+			<div class="blog-masthead">
+	      <div class="container">
+					<div class="row">
+						<div class="col-md-2 logo">VNGRS</div>
+					  <div class="col-md-4">
+							<input type="text" class="search" placeholder="Search by Title, Author, Genre Keyword...">
+							<input type="button" class="btn-search" text="Search">
+							<button style="background: url(images/searchIcon.png) no-repeat center" class="btn-search" />
+						</div>
+					  <div class="col-md-2 recom">RECOMMENDATIONS</div>
+					  <div class="col-md-1 subjects">SUBJECTS</div>
+					  <div class="col-md-2 sign-in">
+							<div class="sign-in-text">
+								SIGN IN | REGISTER
+							</div>
+							<div class="cart">
+								<img src="images/cartIcon.png"/>
+								0
+							</div>
+						</div>
+					</div>
+	      </div>
+	    </div>
+		</div>
+
+		<div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">Book</h1>
+        <p class="lead blog-description">REVIEWS</p>
+				<form id="ratingsForm">
+					<div class="stars">
+						<input type="radio" name="star" class="star-1" id="star-1" value="1" ng-model="rateValue" />
+						<label class="star-1" for="star-1">1</label>
+						<input type="radio" name="star" class="star-2" id="star-2" value="2" ng-model="rateValue" />
+						<label class="star-2" for="star-2">2</label>
+						<input type="radio" name="star" class="star-3" id="star-3" value="3" ng-model="rateValue" />
+						<label class="star-3" for="star-3">3</label>
+						<input type="radio" name="star" class="star-4" id="star-4" value="4" ng-model="rateValue" />
+						<label class="star-4" for="star-4">4</label>
+						<input type="radio" name="star" class="star-5" id="star-5" value="5" ng-model="rateValue"/>
+						<label class="star-5" for="star-5">5</label>
+						<span></span>
+					</div>
+				</form>
+				<p class="total">256 Total Reviews</p>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+          <div class="blog-post">
+            <h2 class="see-reviews">SEE REVIEWS FROM:</h2>
+						<div class="flags">
+
+							<div class="flag-box" ng-class="selectedReviews == reviewsFrom.everyone ? 'everyone-active' : 'everyone'" ng-click="changeReviews(reviewsFrom.everyone)">
+								<p>EVERYONE</p>
+								<p>(225)</p>
+							</div>
+
+							<div class="flag-box" ng-class="selectedReviews == reviewsFrom.readers ? 'readers-active' : 'readers'" ng-click="changeReviews(reviewsFrom.readers)">
+								<p>READERS</p>
+								<p>(220)</p>
+							</div>
+
+							<div class="flag-box" ng-class="selectedReviews == reviewsFrom.critics ? 'critics-active' : 'critics'" ng-click="changeReviews(reviewsFrom.critics)">
+								<p>CRITICS</p>
+								<p>(2)</p>
+							</div>
+
+							<div class="flag-box" ng-class="selectedReviews == reviewsFrom.editors ? 'editors-active' : 'editors'" ng-click="changeReviews(reviewsFrom.editors)">
+								<p>EDITORS</p>
+								<p>(1)</p>
+							</div>
+
+							<div class="flag-box" ng-class="selectedReviews == reviewsFrom.librarians ? 'librarians-active' : 'librarians'" ng-click="changeReviews(reviewsFrom.librarians)">
+								<p>LIBRARIANS</p>
+								<p>(1)</p>
+							</div>
+
+							<div class="flag-box" ng-class="selectedReviews == reviewsFrom.bloggers ? 'bloggers-active' : 'bloggers'" ng-click="changeReviews(reviewsFrom.bloggers)">
+								<p>BLOGGERS</p>
+								<p>(1)</p>
+							</div>
+
+						</div>
+
+            <p class="blog-post-meta">
+							<div class="row">
+							  <div class="col-md-5">
+									<div class="title">
+										<h2 class="most-helpful">Most Helpful</h2>
+										<h2 class="reviews">REVIEWS</h2>
+									</div>
+								</div>
+							  <div class="col-md-7">
+									<div class="sort-by">
+										Sort by:
+										<select class="form-control" ng-model="sortBy">
+										  <option value="-helpful_count">Most Helpful</option>
+										  <option value="-rating">Highest Rating</option>
+										  <option value="-date">Newest First</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</p>
+          </div><!-- /.blog-post -->
+
+					<div ng-repeat="item in data | filter: selectedReviews | orderBy: sortBy">
+						<div class="blog-post post-border">
+							<div class="profile">
+								<p class="date">{{item.date}}</p>
+								<p class="name">{{item.user.firstname}} {{item.user.lastname}}</p>
+								<p class="detail">{{item.user.type}}</p>
+							</div>
+
+
+							<h2 class="blog-post-title">
+								<div class="row">
+								  <div class="col-md-3 post-star">
+										<form id="postForum">
+											<div class="stars">
+												<input type="radio" name="star" class="star-1" id="star-1" value="1" ng-model="item.rating" />
+												<label class="star-1" for="star-1">1</label>
+												<input type="radio" name="star" class="star-2" id="star-2" value="2" ng-model="item.rating" />
+												<label class="star-2" for="star-2">2</label>
+												<input type="radio" name="star" class="star-3" id="star-3" value="3" ng-model="item.rating" />
+												<label class="star-3" for="star-3">3</label>
+												<input type="radio" name="star" class="star-4" id="star-4" value="4" ng-model="item.rating" />
+												<label class="star-4" for="star-4">4</label>
+												<input type="radio" name="star" class="star-5" id="star-5" value="5" ng-model="item.rating	"/>
+												<label class="star-5" for="star-5">5</label>
+												<span></span>
+											</div>
+										</form>
+									</div>
+								  <div class="col-md-9 title">
+										<p>{{item.title}}</p>
+									</div>
+								</div>
+							</h2>
+
+							<p class="description">
+								{{item.content.substr(0, 600)}}...
+							</p>
+
+							<div class="row">
+								<div class="col-md-12 read-more">
+									<a href="#">Read more...</a>
+								</div>
+							</div>
+
+							<p class="review-data">
+								{{item.not_helpful_count}} out of {{item.helpful_count}} found this review helpful.
+							</p>
+
+							<div class="row">
+								<div class="col-md-9">
+									<p class="color-helpful">
+											Was this review helpful to you? <i ng-click="sendVote(item.id, true)">Helpful</i>  |  <i ng-click="sendVote(item.id, false)">Not Helpful</i>
+									</p>
+								</div>
+								<div class="col-md-3 flag-content">
+									<p><a href="#">Flag This Content For Review</a></p>
+								</div>
+							</div>
+	          </div><!-- /.blog-post -->
+					</div>
+
+					<div class="row">
+						<div class="col-md-6">
+							<button type="button" class="btn see-all-reviews"/>See all 225 Reviews <img src="images/seeAll.png"/></button>
+						</div>
+						<div class="col-md-6 align-right">
+							<button type="button" class="btn add-footer"><img src="images/addButtonIcon.png"/> ADD A REVIEW</button>
+						</div>
+					</div>
+
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+
+					<div class="add-review">
+						<form id="ratingsForm">
+							<div class="stars">
+								<input type="radio" name="star" class="star-1" id="star-1" value="1" ng-model="rateValue" />
+								<label class="star-1" for="star-1">1</label>
+								<input type="radio" name="star" class="star-2" id="star-2" value="2" ng-model="rateValue" />
+								<label class="star-2" for="star-2">2</label>
+								<input type="radio" name="star" class="star-3" id="star-3" value="3" ng-model="rateValue" />
+								<label class="star-3" for="star-3">3</label>
+								<input type="radio" name="star" class="star-4" id="star-4" value="4" ng-model="rateValue" />
+								<label class="star-4" for="star-4">4</label>
+								<input type="radio" name="star" class="star-5" id="star-5" value="5" ng-model="rateValue"/>
+								<label class="star-5" for="star-5">5</label>
+								<span></span>
+							</div>
+						</form>
+						<p class="description-vote">
+							Average Rating: 4 out of 5 stars
+
+							<div class="row">
+							  <div class="col-md-4 star-numb">5 STAR</div>
+							  <div class="col-md-7 vote-progress">
+									<div class="progress">
+									  <div class="progress-bar" role="progressbar" aria-valuenow="80"
+									  aria-valuemin="0" aria-valuemax="100" style="width:30%">
+
+									  </div>
+									</div>
+								</div>
+								<div class="col-md-1 vote-numb">(10)</div>
+							</div>
+
+							<div class="row">
+							  <div class="col-md-4 star-numb">4 STAR</div>
+							  <div class="col-md-7 vote-progress">
+									<div class="progress">
+									  <div class="progress-bar" role="progressbar" aria-valuenow="80"
+									  aria-valuemin="0" aria-valuemax="100" style="width:80%">
+									  </div>
+									</div>
+								</div>
+								<div class="col-md-1 vote-numb">(203)</div>
+							</div>
+
+							<div class="row">
+							  <div class="col-md-4 star-numb">3 STAR</div>
+							  <div class="col-md-7 vote-progress">
+									<div class="progress">
+									  <div class="progress-bar" role="progressbar" aria-valuenow="80"
+									  aria-valuemin="0" aria-valuemax="100" style="width:20%">
+									  </div>
+									</div>
+								</div>
+								<div class="col-md-1 vote-numb">(8)</div>
+							</div>
+
+							<div class="row">
+							  <div class="col-md-4 star-numb">2 STAR</div>
+							  <div class="col-md-7 vote-progress">
+									<div class="progress">
+									  <div class="progress-bar" role="progressbar" aria-valuenow="80"
+									  aria-valuemin="0" aria-valuemax="100" style="width:5%">
+									  </div>
+									</div>
+								</div>
+								<div class="col-md-1 vote-numb">(2)</div>
+							</div>
+
+							<div class="row">
+							  <div class="col-md-4 star-numb">1 STAR</div>
+							  <div class="col-md-7 vote-progress">
+									<div class="progress">
+									  <div class="progress-bar" role="progressbar" aria-valuenow="80"
+									  aria-valuemin="0" aria-valuemax="100" style="width:1%">
+									  </div>
+									</div>
+								</div>
+								<div class="col-md-1 vote-numb">(0)</div>
+							</div>
+						</p>
+
+						<p class="all-reviews">
+							View All 225 Reviews
+						</p>
+
+						<p class="add-button">
+							<button type="button" class="btn"><img src="images/addButtonIcon.png"/> ADD A REVIEW</button>
+						</p>
+
+					</div>
+
+					<div class="e-book">
+						<h2>Paperback</h2>
+
+						<p>
+							$2.00
+						</p>
+
+						<button type="button" class="btn add-cart"/>ADD TO CART</button>
+
+						<select class="form-control">
+							<option value="volvo">BUY ELSEWHERE</option>
+						</select>
+
+						<p>
+							-OR-
+						</p>
+
+						<button type="button" class="btn buy-now"/>BUY EBOOK NOW</button>
+					</div>
+
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div>
+	</body>
+
+	<!--build:js js/main.min.js -->
+	<script type="text/javascript" src="js/lib/angular.min.js"></script>
+	<script type="text/javascript" src="js/lib/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="js/main.js"></script>
+
+	<script type="text/javascript" src="js/remote/config.js"></script>
+  <script type="text/javascript" src="js/remote/http.js"></script>
+
+	<script type="text/javascript" src="js/remote/request/register.js"></script>
+	<script type="text/javascript" src="js/remote/request/reviews.js"></script>
+	<script type="text/javascript" src="js/remote/request/vote.js"></script>
+
+	<!-- endbuild -->
+</html>

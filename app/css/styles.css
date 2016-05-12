@@ -1,0 +1,290 @@
+body {
+  font-family: 'brandon-grotesque';
+  background-color: #e7e7e7;
+  margin-top: 48px; }
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  color: #fff;
+  height: 48px;
+  width: 100%;
+  z-index: 999; }
+
+.blog-masthead .container .logo {
+  font-size: 30px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 2px 0 0 15px; }
+
+.blog-masthead .container .recom, .blog-masthead .container .subjects, .blog-masthead .container .sign-in-text {
+  font-size: 14px;
+  margin-top: 13px; }
+
+.blog-masthead .container .sign-in {
+  width: 20%;
+  background-color: #528031;
+  height: 48px;
+  margin: 0;
+  padding-right: 0; }
+  .blog-masthead .container .sign-in .sign-in-text {
+    float: left;
+    margin-left: 10px;
+    width: 150px; }
+  .blog-masthead .container .sign-in .cart {
+    float: right;
+    width: 47px;
+    height: 48px;
+    background-color: #4e7e9f;
+    padding: 13px 0 0 8px; }
+    .blog-masthead .container .sign-in .cart img {
+      margin-top: -6px; }
+
+.container .blog-header {
+  text-align: center; }
+  .container .blog-header h1 {
+    font-family: 'SignPainter-HouseScript';
+    margin-bottom: 0; }
+  .container .blog-header .blog-description {
+    margin-top: -10px;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 0; }
+  .container .blog-header .total {
+    color: #48a7af;
+    font-weight: bold;
+    font-size: 15px; }
+
+.container .search {
+  height: 48px;
+  width: 300px;
+  float: left;
+  border: 0;
+  padding-left: 5px;
+  color: #000; }
+
+.container .btn-search {
+  float: left;
+  width: 47px;
+  margin-left: -47px;
+  height: 48px;
+  background-color: #4e7e9f;
+  border: 0; }
+
+.container .blog-main .post-border {
+  border-bottom: 1px solid #D2D2D2;
+  margin-bottom: 20px; }
+
+.container .blog-main .blog-post .see-reviews {
+  font-size: 17px;
+  font-weight: 700;
+  border-bottom: 1px solid #D2D2D2;
+  margin-bottom: 0; }
+
+.container .blog-main .blog-post .color-helpful i {
+  color: #48a7af;
+  cursor: pointer; }
+
+.container .blog-main .blog-post .flags {
+  height: 91px; }
+  .container .blog-main .blog-post .flags .flag-box {
+    width: 80px;
+    height: 91px;
+    float: left;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    padding: 15px 9.5px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer; }
+    .container .blog-main .blog-post .flags .flag-box p {
+      margin-bottom: 0; }
+  .container .blog-main .blog-post .flags .everyone {
+    background-image: url("../images/everyone.png"); }
+  .container .blog-main .blog-post .flags .everyone-active {
+    background-image: url("../images/everyoneActive.png"); }
+  .container .blog-main .blog-post .flags .readers {
+    background-image: url("../images/readers.png"); }
+  .container .blog-main .blog-post .flags .readers-active {
+    background-image: url("../images/readersActive.png"); }
+  .container .blog-main .blog-post .flags .critics {
+    background-image: url("../images/critics.png"); }
+  .container .blog-main .blog-post .flags .critics-active {
+    background-image: url("../images/criticsActive.png"); }
+  .container .blog-main .blog-post .flags .editors {
+    background-image: url("../images/editors.png"); }
+  .container .blog-main .blog-post .flags .editors-active {
+    background-image: url("../images/editorsActive.png"); }
+  .container .blog-main .blog-post .flags .librarians {
+    background-image: url("../images/librarians.png"); }
+  .container .blog-main .blog-post .flags .librarians-active {
+    background-image: url("../images/librariansActive.png"); }
+  .container .blog-main .blog-post .flags .bloggers {
+    background-image: url("../images/bloggers.png"); }
+  .container .blog-main .blog-post .flags .bloggers-active {
+    background-image: url("../images/bloggersActive.png"); }
+
+.container .blog-main .blog-post .title .most-helpful {
+  font-family: 'SignPainter-HouseScript';
+  margin-bottom: 0; }
+
+.container .blog-main .blog-post .title .reviews {
+  margin: 0;
+  font-weight: bold; }
+
+.container .blog-main .blog-post .sort-by {
+  width: 300px;
+  height: 50px;
+  float: right;
+  margin-top: 25px;
+  padding: 10px 10px 0 10px;
+  font-size: 15px;
+  font-weight: bold; }
+  .container .blog-main .blog-post .sort-by select {
+    margin-top: -5px;
+    width: 220px;
+    border: 0;
+    float: right;
+    border-radius: 7px; }
+
+.container .blog-main .blog-post .profile {
+  height: 50px;
+  background-image: url("../images/headLineBlue.png");
+  background-repeat: no-repeat;
+  padding: 0 0 0 15px;
+  font-size: 14px;
+  line-height: 1.2; }
+  .container .blog-main .blog-post .profile p {
+    margin: 0; }
+  .container .blog-main .blog-post .profile .date {
+    color: #888888; }
+  .container .blog-main .blog-post .profile .name {
+    font-weight: bold; }
+
+.container .blog-main .blog-post .blog-post-title form {
+  float: left; }
+
+.container .blog-main .blog-post .blog-post-title .post-star {
+  width: 18%; }
+
+.container .blog-main .blog-post .blog-post-title .title {
+  font-size: 20px;
+  margin-top: 6px;
+  font-weight: 700; }
+
+.container .blog-main .blog-post .description {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: -20px; }
+
+.container .blog-main .blog-post .review-data, .container .blog-main .blog-post .is-helpful {
+  color: #949494; }
+
+.container .blog-main .blog-post .read-more {
+  text-align: right;
+  font-size: 15px;
+  font-weight: 700; }
+
+.container .blog-main .blog-post .flag-content p {
+  text-align: right; }
+
+.container .blog-sidebar {
+  margin-top: 38px; }
+  .container .blog-sidebar .box, .container .blog-sidebar .add-review, .container .blog-sidebar .e-book {
+    height: 255px;
+    box-shadow: 0 0 8px #848484;
+    margin-bottom: 20px;
+    padding: 10px; }
+  .container .blog-sidebar .add-review {
+    background-color: #F3F3F3;
+    border: 2px solid white;
+    background: #e5e5e5; }
+    .container .blog-sidebar .add-review .description-vote {
+      text-align: center;
+      font-size: 13px;
+      color: #969696; }
+    .container .blog-sidebar .add-review .star-numb {
+      width: 23%;
+      padding-right: 0;
+      font-weight: 700;
+      color: #48a7af; }
+    .container .blog-sidebar .add-review .vote-progress {
+      padding: 0 4px 0 4px; }
+    .container .blog-sidebar .add-review .vote-numb {
+      padding-left: 0; }
+    .container .blog-sidebar .add-review .progress-bar {
+      background-color: #48a7af;
+      height: 15px; }
+    .container .blog-sidebar .add-review .progress {
+      margin-top: 2px;
+      border-radius: 0;
+      margin-bottom: 5px;
+      height: 15px; }
+    .container .blog-sidebar .add-review .all-reviews {
+      text-align: center;
+      margin-top: -10px;
+      color: #48a7af;
+      font-weight: bold;
+      margin-bottom: 2px; }
+    .container .blog-sidebar .add-review .add-button {
+      text-align: center; }
+      .container .blog-sidebar .add-review .add-button button {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6db9bf), color-stop(1, #4ba9b0));
+        color: white;
+        border: 0;
+        border-radius: 6px;
+        font-weight: 700; }
+  .container .blog-sidebar .e-book {
+    background-color: #fff;
+    text-align: center; }
+    .container .blog-sidebar .e-book h2 {
+      font-family: 'SignPainter-HouseScript';
+      font-size: 32px;
+      margin: 8px 0 0 0; }
+    .container .blog-sidebar .e-book p {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: -5px; }
+    .container .blog-sidebar .e-book .add-cart {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc600), color-stop(1, #f3bd00));
+      color: white;
+      border: 0;
+      border-radius: 6px;
+      font-weight: 700;
+      width: 160px; }
+    .container .blog-sidebar .e-book .buy-now {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ff5a00), color-stop(1, #f25500));
+      color: white;
+      border: 0;
+      border-radius: 6px;
+      font-weight: 700;
+      width: 160px; }
+    .container .blog-sidebar .e-book select {
+      width: 160px;
+      margin-top: 10px;
+      display: inline-flex;
+      margin-bottom: 10px; }
+
+.add-footer {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6db9bf), color-stop(1, #4ba9b0));
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  font-weight: 700; }
+
+.see-all-reviews {
+  background-color: white;
+  color: #51a8a8;
+  border: 0;
+  border-radius: 6px;
+  font-weight: 700;
+  box-shadow: 0 0 3px #D4D4D4; }
+
+.align-right {
+  text-align: right; }
+
+.align-left {
+  text-align: left; }

@@ -1,0 +1,418 @@
+body{
+  font-family: 'brandon-grotesque';
+  background-color: #e7e7e7;
+
+  margin-top: 48px;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  color: #fff;
+  height: 48px;
+  width: 100%;
+  z-index: 999;
+}
+
+.blog-masthead{
+  .container {
+    .logo {
+      font-size: 30px;
+      font-weight: 400;
+      font-style: italic;
+      margin: 2px 0 0 15px;
+    }
+
+    .recom, .subjects, .sign-in-text {
+      font-size: 14px;
+      margin-top: 13px;
+    }
+
+    .sign-in {
+      width: 20%;
+      background-color: #528031;
+      height: 48px;
+      margin: 0;
+      padding-right: 0;
+
+
+      .sign-in-text {
+        float: left;
+        margin-left: 10px;
+        width: 150px;
+      }
+
+      .cart {
+        float: right;
+        width: 47px;
+        height: 48px;
+        background-color: #4e7e9f;
+        padding: 13px 0 0 8px;
+
+        img {
+          margin-top: -6px;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  .blog-header{
+    text-align: center;
+
+    h1 {
+      font-family: 'SignPainter-HouseScript';
+      margin-bottom: 0;
+    }
+
+    .blog-description {
+      margin-top: -10px;
+      font-weight: bold;
+      font-size: 30px;
+      margin-bottom: 0;
+    }
+
+    .total {
+      color: #48a7af;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+  }
+
+  .search {
+    height: 48px;
+    width: 300px;
+    float: left;
+    border: 0;
+    padding-left: 5px;
+    color: #000;
+  }
+
+  .btn-search {
+    float: left;
+    width: 47px;
+    margin-left: -47px;
+    height: 48px;
+    background-color: #4e7e9f;
+    border: 0;
+  }
+
+  .blog-main {
+    .post-border {
+      border-bottom: 1px solid #D2D2D2;
+      margin-bottom: 20px;
+    }
+    .blog-post {
+      .see-reviews {
+        font-size: 17px;
+        font-weight: 700;
+        border-bottom: 1px solid #D2D2D2;
+        margin-bottom: 0;
+      }
+
+      .color-helpful {
+        i {
+          color: #48a7af;
+          cursor: pointer;
+        }
+      }
+
+      .flags {
+        height: 91px;
+
+        .flag-box {
+          width: 80px;
+          height: 91px;
+          float: left;
+          background-repeat: no-repeat;
+          margin-right: 10px;
+          padding: 15px 9.5px;
+          text-align: center;
+          font-size: 12px;
+          font-weight: bold;
+          cursor: pointer;
+
+          p {
+            margin-bottom: 0;
+          }
+        }
+
+        .everyone {
+          background-image: url("../images/everyone.png");
+        }
+
+        .everyone-active {
+          background-image: url("../images/everyoneActive.png");
+        }
+
+        .readers {
+          background-image: url("../images/readers.png");
+        }
+
+        .readers-active {
+          background-image: url("../images/readersActive.png");
+        }
+
+        .critics {
+          background-image: url("../images/critics.png");
+        }
+
+        .critics-active {
+          background-image: url("../images/criticsActive.png");
+        }
+
+        .editors {
+          background-image: url("../images/editors.png");
+        }
+
+        .editors-active {
+          background-image: url("../images/editorsActive.png");
+        }
+
+        .librarians {
+          background-image: url("../images/librarians.png");
+        }
+
+        .librarians-active {
+          background-image: url("../images/librariansActive.png");
+        }
+
+        .bloggers {
+          background-image: url("../images/bloggers.png");
+        }
+
+        .bloggers-active {
+          background-image: url("../images/bloggersActive.png");
+        }
+      }
+
+      .title {
+        .most-helpful {
+          font-family: 'SignPainter-HouseScript';
+          margin-bottom: 0;
+        }
+
+        .reviews {
+          margin: 0;
+          font-weight: bold;
+        }
+      }
+
+      .sort-by {
+        width: 300px;
+        height: 50px;
+        float: right;
+        margin-top: 25px;
+        padding: 10px 10px 0 10px;
+        font-size: 15px;
+        font-weight: bold;
+
+        select {
+          margin-top: -5px;
+          width: 220px;
+          border: 0;
+          float: right;
+          border-radius: 7px;
+        }
+      }
+
+      .profile {
+        height: 50px;
+        background-image: url("../images/headLineBlue.png");
+        background-repeat: no-repeat;
+        padding: 0 0 0 15px;
+        font-size: 14px;
+        line-height: 1.2;
+
+        p {
+          margin: 0;
+        }
+
+        .date {
+          color: #888888;
+        }
+
+        .name {
+          font-weight: bold;
+        }
+      }
+
+      .blog-post-title {
+        form {
+          float: left;
+        }
+        .post-star {
+          width: 18%;
+        }
+        .title {
+          font-size: 20px;
+          margin-top: 6px;
+          font-weight: 700;
+        }
+      }
+
+      .description {
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: -20px;
+      }
+
+      .review-data, .is-helpful {
+        color: #949494;
+      }
+
+      .read-more {
+        text-align: right;
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      .flag-content {
+        p {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .blog-sidebar {
+    margin-top: 38px;
+
+    .box, .add-review, .e-book {
+      height: 255px;
+      box-shadow: 0 0 8px #848484;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+
+    .add-review {
+      background-color: #F3F3F3;
+      border: 2px solid white;
+      background: #e5e5e5;
+
+      .description-vote {
+        text-align: center;
+        font-size: 13px;
+        color: #969696;
+      }
+
+      .star-numb {
+        width: 23%;
+        padding-right: 0;
+        font-weight: 700;
+        color: #48a7af;
+      }
+
+      .vote-progress {
+        padding: 0 4px 0 4px;
+      }
+
+      .vote-numb {
+        padding-left: 0;
+      }
+
+      .progress-bar {
+          background-color: #48a7af;
+          height: 15px;
+      }
+
+      .progress {
+        margin-top: 2px;
+        border-radius: 0;
+        margin-bottom: 5px;
+        height: 15px;
+      }
+
+      .all-reviews {
+        text-align: center;
+        margin-top: -10px;
+        color: #48a7af;
+        font-weight: bold;
+        margin-bottom: 2px;
+      }
+
+      .add-button {
+        text-align: center;
+
+        button {
+          background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6db9bf), color-stop(1, #4ba9b0));
+          color: white;
+          border: 0;
+          border-radius: 6px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .e-book {
+      background-color: #fff;
+      text-align: center;
+
+      h2 {
+        font-family: 'SignPainter-HouseScript';
+        font-size: 32px;
+        margin: 8px 0 0 0;
+      }
+
+      p {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: -5px;
+      }
+
+      .add-cart {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc600), color-stop(1, #f3bd00));
+        color: white;
+        border: 0;
+        border-radius: 6px;
+        font-weight: 700;
+        width: 160px;
+      }
+
+      .buy-now {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ff5a00), color-stop(1, #f25500));
+        color: white;
+        border: 0;
+        border-radius: 6px;
+        font-weight: 700;
+        width: 160px;
+      }
+
+      select {
+        width: 160px;
+        margin-top: 10px;
+        display: inline-flex;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.add-footer {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6db9bf), color-stop(1, #4ba9b0));
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.see-all-reviews {
+  background-color: white;
+  color: #51a8a8;
+  border: 0;
+  border-radius: 6px;
+  font-weight: 700;
+  box-shadow: 0 0 3px #D4D4D4;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
